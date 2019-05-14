@@ -1,4 +1,32 @@
 import React from "react";
+import TodoForm from "./components/TodoComponents/TodoForm";
+import Todo from "./components/TodoComponents/Todo";
+// import TodoList from "./components/TodoComponents/TodoList";
+
+const tasklist = [
+  {
+    task: "Organize Garage",
+    id: 1528817077286,
+    completed: false
+  },
+  {
+    task: "Bake Cookies",
+    id: 1528817084358,
+    completed: false
+  },
+  {
+    task: "Finish project",
+    id: 1528817084358,
+    completed: false
+  }
+];
+
+const defaultState = {
+  todoList: tasklist,
+  task: "",
+  id: null,
+  completed: false
+};
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -6,26 +34,46 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   constructor() {
     super();
-    this.state = {
-      task: "",
-      id: 1528817077286,
-      completed: false
-    };
+    this.state = defaultState;
   }
 
-  taskHandler = event => {
+  changeHandler = event => {
     this.setState({
       task: event.target.value
+    });
+  };
+
+  // adding the new todo
+  propsAddTodo = event => {
+    event.preventDefault();
+  };
+
+  // strike over the text to marked as completed
+  clickCompletedHandler = event => {
+    event.target.style.textDecoration = "line-through";
+    this.setState({
+      completed: true
     });
   };
 
   render() {
     return (
       <div className="app">
-        <h2>{this.state.task}</h2>
-        <input type="text" placeholder="Todo ..." onChange={this.taskHandler} />
-        <button>Add Todo</button>
-        <button>Clear Completed</button>
+        {/* iterate over the array */}
+        <div>
+          {this.state.todoList.map(todo => (
+            <Todo propsTodo={todo.task} />
+          ))}
+        </div>
+
+        {/* <TodoList propsArray={this.state.todoList} /> */}
+
+        {/* form */}
+        <TodoForm
+          changeHandler={this.changeHandler}
+          propsAddTodo={this.propsAddTodo}
+          propsremoveTodo={this.propsremoveTodo}
+        />
       </div>
     );
   }
