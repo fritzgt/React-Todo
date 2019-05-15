@@ -46,6 +46,24 @@ class App extends React.Component {
   // adding the new todo
   propsAddTodo = event => {
     event.preventDefault();
+
+    let newTodo = {
+      todoList: tasklist,
+      task: this.state.task,
+      id: this.state.id,
+      completed: this.state.completed
+    };
+    this.setState({
+      todoList: [...this.state.todoList, newTodo],
+      task: "",
+      id: null,
+      completed: false
+    });
+  };
+
+  // Remove complete tasks
+  propsremoveTodo = event => {
+    event.preventDefault();
   };
 
   // strike over the text to marked as completed
@@ -59,10 +77,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <h1>Welcome to my Todo app</h1>
         {/* iterate over the array */}
         <div>
           {this.state.todoList.map(todo => (
-            <Todo propsTodo={todo.task} />
+            <Todo
+              propsCompleted={this.clickCompletedHandler}
+              propsTodo={todo.task}
+            />
           ))}
         </div>
 

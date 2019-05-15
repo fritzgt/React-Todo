@@ -2,9 +2,9 @@ import React from "react";
 
 const Todo = props => {
   return (
-    <div>
-      <h4>{props.propsTodo}</h4>
-    </div>
+    <ul>
+      <li onClick={props.propsCompleted}>{props.propsTodo}</li>
+    </ul>
   );
 };
 
