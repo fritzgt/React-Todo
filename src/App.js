@@ -11,7 +11,7 @@ const tasklist = [
   {
     task: "Bake Cookies",
     id: 1528817084358,
-    completed: false
+    completed: true
   },
   {
     task: "Finish project",
@@ -63,6 +63,10 @@ class App extends React.Component {
   // strike over the text to marked as completed
   clickCompletedHandler = event => {
     event.target.style.textDecoration = "line-through";
+    event.target.style.color = "red";
+    console.log(event);
+
+    // Still working on the functionality
     this.setState({
       completed: true
     });
@@ -71,9 +75,11 @@ class App extends React.Component {
   // Remove complete tasks
   propsremoveTodo = event => {
     event.preventDefault();
-    return event.completed
-      ? console.log(event.target)
-      : console.log(event.target);
+    console.log(event.target);
+    // Still working on the functionality
+    return this.state.todoList.map((status, index) =>
+      status.completed ? console.log(status) : console.log(status)
+    );
   };
 
   render() {
