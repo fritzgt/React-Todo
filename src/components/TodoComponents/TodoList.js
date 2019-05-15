@@ -1,11 +1,16 @@
 import React from "react";
-import Todo from "Todo";
+import Todo from "./Todo";
 
 const TodoList = props => {
+  //   console.log({ props });
   return (
     <div>
       {props.propsArray.map(todo => (
-        <Todo propsTodo={todo.task} />
+        <Todo
+          propsCompleted={props.propsCompleted}
+          propsTodo={todo.task}
+          key={todo.task}
+        />
       ))}
     </div>
   );

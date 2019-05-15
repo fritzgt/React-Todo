@@ -1,7 +1,6 @@
 import React from "react";
 import TodoForm from "./components/TodoComponents/TodoForm";
-import Todo from "./components/TodoComponents/Todo";
-// import TodoList from "./components/TodoComponents/TodoList";
+import TodoList from "./components/TodoComponents/TodoList";
 
 const tasklist = [
   {
@@ -61,11 +60,6 @@ class App extends React.Component {
     });
   };
 
-  // Remove complete tasks
-  propsremoveTodo = event => {
-    event.preventDefault();
-  };
-
   // strike over the text to marked as completed
   clickCompletedHandler = event => {
     event.target.style.textDecoration = "line-through";
@@ -74,21 +68,24 @@ class App extends React.Component {
     });
   };
 
+  // Remove complete tasks
+  propsremoveTodo = event => {
+    event.preventDefault();
+    return event.completed
+      ? console.log(event.target)
+      : console.log(event.target);
+  };
+
   render() {
     return (
       <div className="app">
         <h1>Welcome to my Todo app</h1>
         {/* iterate over the array */}
-        <div>
-          {this.state.todoList.map(todo => (
-            <Todo
-              propsCompleted={this.clickCompletedHandler}
-              propsTodo={todo.task}
-            />
-          ))}
-        </div>
 
-        {/* <TodoList propsArray={this.state.todoList} /> */}
+        <TodoList
+          propsArray={this.state.todoList}
+          propsCompleted={this.clickCompletedHandler}
+        />
 
         {/* form */}
         <TodoForm
