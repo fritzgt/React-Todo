@@ -71,11 +71,10 @@ class App extends React.Component {
     // console.log("render again!");
     return (
       <div className="App">
+        <h1> React To-Do </h1>
         <div className="header">
-          <h1>Todo App</h1>
-          <TodoForm addItem={this.addTodo} />
+          <TodoForm addItem={this.addTodo} />{" "}
         </div>
-
         <TodoList
           propsArray={this.state.tasklist}
           toggleItem={this.toggleItem}

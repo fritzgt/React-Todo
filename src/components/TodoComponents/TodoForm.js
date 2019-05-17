@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Todo.css";
+import "./Todo.css";
 
 class TodoForm extends React.Component {
   constructor() {
@@ -10,12 +10,16 @@ class TodoForm extends React.Component {
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   };
 
   submitItem = e => {
     e.preventDefault();
-    this.setState({ item: "" });
+    this.setState({
+      item: ""
+    });
     this.props.addItem(this.state.item);
   };
 
@@ -26,10 +30,12 @@ class TodoForm extends React.Component {
           type="text"
           value={this.state.item}
           name="item"
-          placeholder="Enter New Todo.."
+          placeholder="Add a to-do"
           onChange={this.handleChange}
-        />
-        <button>Add Todo</button>
+        />{" "}
+        <button>
+          <i class="fas fa-2x fa-plus-circle" />
+        </button>
       </form>
     );
   }

@@ -8,12 +8,13 @@ const TodoList = props => {
   //   console.log({ props });
   return (
     <div className="todo-list">
+      {" "}
       {props.propsArray.map(item => (
         <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
-      ))}
+      ))}{" "}
       <button className="clear-btn" onClick={props.propsClearCompleted}>
-        Clear Completed
-      </button>
+        <i class="far fa-lg fa-times-circle"> </i>Clear Completed{" "}
+      </button>{" "}
     </div>
   );
 };

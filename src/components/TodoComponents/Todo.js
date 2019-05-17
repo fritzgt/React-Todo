@@ -5,14 +5,20 @@ import React from "react";
 
 const Todo = props => {
   return (
-    <ul>
-      <li
-        className={`task${props.item.completed ? " completed" : ""}`} //ternary operation
-        onClick={() => props.toggleItem(props.item.id)}
-      >
-        <p>{props.item.task}</p>
-      </li>
-    </ul>
+    <div
+      className={`task${props.item.completed ? " completed" : ""}`} //ternary operation
+      onClick={() => props.toggleItem(props.item.id)}
+    >
+      <p>
+        <i
+          className={`far fa-lg ${
+            props.item.completed ? " fa-check-circle" : " fa-circle"
+          }`}
+        />
+
+        {props.item.task}
+      </p>
+    </div>
   );
 };
 
