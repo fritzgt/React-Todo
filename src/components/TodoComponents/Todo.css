@@ -3,7 +3,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .task {
@@ -57,7 +57,41 @@ input::placeholder {
 }
 
 .clear-btn {
-    margin-top: 40px;
     background-color: #4CAE51;
-    border: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+    form {
+        flex-flow: column;
+    }
+
+    form>input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 0;
+
+    }
+
+
+    .todo-list {
+        flex-flow: column;
+    }
+
+    .task {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .clear-btn {
+        height: 50px;
+        /* margin-bottom: 50px; */
+    }
+
 }

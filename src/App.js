@@ -81,14 +81,16 @@ class App extends React.Component {
         <div className="header">
           <TodoForm addItem={this.addTodo} />
         </div>
-        <TodoList
-          propsArray={this.state.tasklist}
-          toggleItem={this.toggleItem}
-          propsClearCompleted={this.propsClearCompleted}
-        />
+        <div>
+          <TodoList
+            propsArray={this.state.tasklist}
+            toggleItem={this.toggleItem}
+            propsClearCompleted={this.propsClearCompleted}
+          />
+        </div>
         <footer>
           <a href="https://github.com/fritzgt" target="blank">
-            Created by Fritz GT <i className="fab fa-github" />
+            <i className="fab fa-github" />
           </a>
         </footer>
       </div>
