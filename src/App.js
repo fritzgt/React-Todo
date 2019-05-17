@@ -18,6 +18,11 @@ const tasklist = [
     task: "Finish project",
     id: 1528817084358,
     completed: false
+  },
+  {
+    task: "Go to the GYM",
+    id: 1528817084398,
+    completed: false
   }
 ];
 
@@ -71,7 +76,7 @@ class App extends React.Component {
     // console.log("render again!");
     return (
       <div className="App">
-        <h1> React To-Do </h1>
+        <h1> React To-Do App</h1>
         <div className="header">
           <TodoForm addItem={this.addTodo} />
         </div>

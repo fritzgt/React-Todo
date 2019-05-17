@@ -40,8 +40,8 @@ form>input {
 }
 
 button {
-    background-color: #4585F5;
-    border: 1px solid #4585F5;
+    background-color: #4CAE51;
+    border: 1px solid #4CAE51;
     color: white;
     font-size: 16px;
     padding: 6px 14px;
@@ -58,7 +58,6 @@ input::placeholder {
 
 .clear-btn {
     margin-top: 40px;
-    /* padding: 15px; */
     background-color: #4CAE51;
     border: 0;
 }
