@@ -15,7 +15,6 @@ const Todo = props => {
             props.item.completed ? " fa-check-circle" : " fa-circle"
           }`}
         />
-
         {props.item.task}
       </p>
     </div>
@@ -23,5 +22,3 @@ const Todo = props => {
 };
 
 export default Todo;
-
-//propsCompleted

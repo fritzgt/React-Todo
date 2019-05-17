@@ -3,6 +3,7 @@ import "./App.css";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
 
+//Placeholder array of objects
 const tasklist = [
   {
     task: "Organize Garage",
@@ -49,7 +50,7 @@ class App extends React.Component {
     });
   };
 
-  // strike over the text to marked as completed
+  //Toggle comleted true/false
   toggleItem = itemId => {
     this.setState({
       tasklist: this.state.tasklist.map(item => {
@@ -72,8 +73,8 @@ class App extends React.Component {
     });
   };
 
+  //rendering JSX
   render() {
-    // console.log("render again!");
     return (
       <div className="App">
         <h1> React To-Do App</h1>
@@ -85,6 +86,11 @@ class App extends React.Component {
           toggleItem={this.toggleItem}
           propsClearCompleted={this.propsClearCompleted}
         />
+        <footer>
+          <a href="https://github.com/fritzgt" target="blank">
+            Created by Fritz GT <i class="fab fa-github" />
+          </a>
+        </footer>
       </div>
     );
   }

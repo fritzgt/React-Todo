@@ -9,12 +9,14 @@ class TodoForm extends React.Component {
     };
   }
 
+  //Handle change to add value to the name
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
+  //Passing item to the array
   submitItem = e => {
     e.preventDefault();
     this.setState({
@@ -23,6 +25,7 @@ class TodoForm extends React.Component {
     this.props.addItem(this.state.item);
   };
 
+  //Rendering JSX from
   render() {
     return (
       <form onSubmit={this.submitItem}>
