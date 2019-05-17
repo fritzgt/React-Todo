@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
 
@@ -10,8 +11,8 @@ const tasklist = [
   },
   {
     task: "Bake Cookies",
-    id: 1528817084358,
-    completed: true
+    id: 1528817084359,
+    completed: false
   },
   {
     task: "Finish project",
@@ -20,84 +21,65 @@ const tasklist = [
   }
 ];
 
-const defaultState = {
-  todoList: tasklist,
-  task: "",
-  id: null,
-  completed: false
-};
-
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   constructor() {
     super();
-    this.state = defaultState;
+    this.state = {
+      tasklist
+    };
   }
 
-  changeHandler = event => {
-    this.setState({
-      task: event.target.value
-    });
-  };
-
   // adding the new todo
-  propsAddTodo = event => {
-    event.preventDefault();
-
+  addTodo = item => {
     let newTodo = {
-      todoList: tasklist,
-      task: this.state.task,
-      id: this.state.id,
-      completed: this.state.completed
+      task: item,
+      id: Date.now(),
+      completed: false
     };
     this.setState({
-      todoList: [...this.state.todoList, newTodo],
-      task: "",
-      id: null,
-      completed: false
+      tasklist: [...this.state.tasklist, newTodo]
     });
   };
 
   // strike over the text to marked as completed
-  clickCompletedHandler = event => {
-    event.target.style.textDecoration = "line-through";
-    event.target.style.color = "red";
-    console.log(event);
-
-    // Still working on the functionality
+  toggleItem = itemId => {
     this.setState({
-      completed: true
+      tasklist: this.state.tasklist.map(item => {
+        if (itemId === item.id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        }
+        return item;
+      })
     });
   };
 
   // Remove complete tasks
-  propsremoveTodo = event => {
+  propsClearCompleted = event => {
     event.preventDefault();
-    console.log(event.target);
-    // Still working on the functionality
-    return this.state.todoList.map((status, index) =>
-      status.completed ? console.log(status) : console.log(status)
-    );
+    this.setState({
+      tasklist: this.state.tasklist.filter(item => !item.completed)
+    });
   };
 
   render() {
+    // console.log("render again!");
     return (
-      <div className="app">
-        <h1>Welcome to my Todo app</h1>
-        {/* iterate over the array */}
+      <div className="App">
+        <div className="header">
+          <h1>Todo App</h1>
+          <TodoForm addItem={this.addTodo} />
+        </div>
 
         <TodoList
-          propsArray={this.state.todoList}
-          propsCompleted={this.clickCompletedHandler}
-        />
-
-        {/* form */}
-        <TodoForm
-          changeHandler={this.changeHandler}
-          propsAddTodo={this.propsAddTodo}
-          propsremoveTodo={this.propsremoveTodo}
+          propsArray={this.state.tasklist}
+          toggleItem={this.toggleItem}
+          propsClearCompleted={this.propsClearCompleted}
         />
       </div>
     );

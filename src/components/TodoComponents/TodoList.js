@@ -1,17 +1,19 @@
 import React from "react";
 import Todo from "./Todo";
+// import "./Todo.css";
+
+//This receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
 
 const TodoList = props => {
   //   console.log({ props });
   return (
-    <div>
-      {props.propsArray.map(todo => (
-        <Todo
-          propsCompleted={props.propsCompleted}
-          propsTodo={todo.task}
-          key={todo.task}
-        />
+    <div className="todo-list">
+      {props.propsArray.map(item => (
+        <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
       ))}
+      <button className="clear-btn" onClick={props.propsClearCompleted}>
+        Clear Completed
+      </button>
     </div>
   );
 };
