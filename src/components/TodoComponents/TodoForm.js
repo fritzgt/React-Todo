@@ -38,7 +38,7 @@ class TodoForm extends React.Component {
           required
         />{" "}
         <button>
-          <i class="fas fa-2x fa-plus-circle" />
+          <i className="fas fa-2x fa-plus-circle" />
         </button>
       </form>
     );

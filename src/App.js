@@ -88,7 +88,7 @@ class App extends React.Component {
         />
         <footer>
           <a href="https://github.com/fritzgt" target="blank">
-            Created by Fritz GT <i class="fab fa-github" />
+            Created by Fritz GT <i className="fab fa-github" />
           </a>
         </footer>
       </div>

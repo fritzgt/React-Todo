@@ -14,7 +14,7 @@ const TodoList = props => {
         ))}
       </div>
       <button className="clear-btn" onClick={props.propsClearCompleted}>
-        <i class="fas fa-lg  fa-tasks"> </i>Clear Completed{" "}
+        <i className="fas fa-lg  fa-tasks"> </i>Clear Completed{" "}
       </button>
     </span>
   );
