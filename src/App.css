@@ -50,10 +50,11 @@ span {
 
 h1 {
     text-align: center;
-    /* color: black; */
     padding: 40px;
     font-size: 3rem
 }
+
+
 
 
 i {
@@ -70,4 +71,14 @@ footer {
 a {
     text-decoration: none;
     color: white
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+        padding: 10px;
+        font-size: 2rem
+    }
 }
