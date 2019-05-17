@@ -73,7 +73,7 @@ class App extends React.Component {
       <div className="App">
         <h1> React To-Do </h1>
         <div className="header">
-          <TodoForm addItem={this.addTodo} />{" "}
+          <TodoForm addItem={this.addTodo} />
         </div>
         <TodoList
           propsArray={this.state.tasklist}

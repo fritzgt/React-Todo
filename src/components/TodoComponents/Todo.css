@@ -12,6 +12,7 @@
     text-align: left;
     margin: 4px 0;
     padding-left: 8px;
+
 }
 
 .task.completed {
@@ -22,9 +23,10 @@
 
 
 form {
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
 }
 
 form>input {
@@ -46,6 +48,8 @@ button {
     border-radius: 15px;
 }
 
+
+
 input::placeholder {
     color: #4585F5;
     opacity: 0.4;
@@ -53,5 +57,8 @@ input::placeholder {
 }
 
 .clear-btn {
-    margin-top: 16px;
+    margin-top: 40px;
+    /* padding: 15px; */
+    background-color: #4CAE51;
+    border: 0;
 }
