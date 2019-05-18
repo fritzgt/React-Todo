@@ -50,6 +50,19 @@ class App extends React.Component {
     });
   };
 
+  //Save to local storage
+  componentWillMount() {
+    localStorage.getItem("tasklist") &&
+      this.setState({
+        tasklist: JSON.parse(localStorage.getItem("tasklist"))
+      });
+  }
+
+  //Save to local storage
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("tasklist", JSON.stringify(nextState.tasklist));
+  }
+
   //Toggle comleted true/false
   toggleItem = itemId => {
     this.setState({
