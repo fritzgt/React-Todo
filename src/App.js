@@ -90,7 +90,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1> React To-Do App</h1>
+        <h1> Daily To-Do App</h1>
         <div className="header">
           <TodoForm addItem={this.addTodo} />
         </div>
@@ -103,7 +103,7 @@ class App extends React.Component {
         </div>
         <footer>
           <a href="https://github.com/fritzgt" target="blank">
-            <i className="fab fa-github" />
+            <i className="fab fa-lg fa-github" />
           </a>
         </footer>
       </div>

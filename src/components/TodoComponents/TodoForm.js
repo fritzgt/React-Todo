@@ -36,7 +36,7 @@ class TodoForm extends React.Component {
           placeholder="Add a to-do"
           onChange={this.handleChange}
           required
-        />{" "}
+        />
         <button>
           <i className="fas fa-2x fa-plus-circle" />
         </button>
