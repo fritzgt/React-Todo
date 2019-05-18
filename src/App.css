@@ -76,21 +76,21 @@ a {
     .App {
         padding: 0;
         max-width: 100%;
-        border-bottom: 1px solid #4585F5;
+        border-bottom: 1px solid lightgray;
     }
 
     .header {
-
-        justify-content: center;
-
+        background-color: #1E90FF;
     }
 
     h1 {
-        color: gray
+        font-weight: lighter;
+        font-size: 1.5rem
     }
 
     p {
         color: black;
+        font-size: 1rem
     }
 
     body {
@@ -99,9 +99,6 @@ a {
         background-color: #FAFAFA;
     }
 
-    footer i {
-        color: gray;
 
-    }
 
 }

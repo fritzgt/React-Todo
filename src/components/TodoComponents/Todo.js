@@ -12,7 +12,7 @@ const Todo = props => {
       <p>
         <i
           className={`far fa-lg ${
-            props.item.completed ? " fa-check-circle" : " fa-circle"
+            props.item.completed ? " fas fa-check-circle" : " fa-circle"
           }`}
         />
         {props.item.task}

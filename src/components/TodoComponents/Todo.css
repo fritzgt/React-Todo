@@ -43,7 +43,7 @@ button {
     background-color: #4CAE51;
     border: 1px solid #4CAE51;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 6px 14px;
     border-radius: 15px;
 }
@@ -51,7 +51,7 @@ button {
 
 
 input::placeholder {
-    color: #4585F5;
+    font-size: 1.3rem;
     opacity: 0.4;
     padding: 5px;
 }
@@ -65,53 +65,76 @@ input::placeholder {
 
 
     form {
-        flex-flow: column;
+        padding: 0;
 
     }
 
     form>input {
-        width: 95%;
+        width: 100%;
         padding: 10px 0;
         border-radius: 0;
         margin: 10px auto;
+        border: 0;
+        border-top: 1px solid lightgray;
+        position: fixed;
+        bottom: 30px;
+        left: 0;
     }
 
     .task.completed {
-        background-color: aliceblue;
-        color: black;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+    }
+
+    .task.completed i {
+        color: #4CAE51;
 
     }
 
 
     .todo-list {
         flex-flow: column;
-        color: black;
+        color: gray;
         margin: 0 auto;
     }
 
     .task {
-        border-top: 1px solid #4585F5;
+        border-top: 1px solid lightgray;
         margin: 0 auto;
         width: 98%;
         background-color: white;
         font-size: 1.3rem;
     }
 
-
-
-
     button {
+        display: none;
+        background-color: white;
         border-radius: 0;
-        width: 100%;
+        border: 0;
+        color: #4585F5;
+        font-size: 18px;
+        padding: 5px;
+    }
 
+    .button i {
+        color: #4585F5
     }
 
     .clear-btn {
-        height: 50px;
+        display: block;
+        width: 100%;
+        background-color: #1E90FF;
+        border: 0;
+        height: 40px;
         position: fixed;
         bottom: 0;
         left: 0;
+        color: white
+    }
 
+    .clear-btn i {
+        color: white
     }
 
 }

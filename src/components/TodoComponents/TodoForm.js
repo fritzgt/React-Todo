@@ -33,7 +33,7 @@ class TodoForm extends React.Component {
           type="text"
           value={this.state.item}
           name="item"
-          placeholder="Add a to-do"
+          placeholder=" +   Add a to-do"
           onChange={this.handleChange}
           required
         />
