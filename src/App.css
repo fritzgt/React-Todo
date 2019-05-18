@@ -81,12 +81,13 @@ a {
 
     .header {
         background-color: 0;
+        background-color: #1E90FF;
     }
 
     h1 {
         font-weight: lighter;
         font-size: 1.5rem;
-        color: #1E90FF;
+        /* color: #1E90FF; */
     }
 
     p {
@@ -102,7 +103,7 @@ a {
 
     footer i {
         padding-top: 20px;
-        color: #1E90FF;
+        /* color: #1E90FF; */
     }
 
 
