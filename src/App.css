@@ -69,3 +69,14 @@ a {
     text-decoration: none;
     color: white
 }
+
+
+@media only screen and (max-width: 600px) {
+
+
+    body {
+
+        background-size: auto;
+    }
+
+}
