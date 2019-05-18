@@ -91,7 +91,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-          <h1>Daily To-Do App</h1>
+          <h1>
+            <i class="far  fa-lightbulb" />
+            Daily To-Do App
+          </h1>
         </div>
         <div className="Task-container">
           <TodoForm addItem={this.addTodo} />
