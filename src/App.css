@@ -84,8 +84,6 @@ a {
     .header {
         background-color: 0;
         background-color: #1E90FF;
-        position: fixed;
-        width: 100%;
     }
 
     h1 {
@@ -107,7 +105,7 @@ a {
 
     footer i {
         padding-top: 20px;
-        position: fixed
+        /* color: #1E90FF; */
     }
 
 
