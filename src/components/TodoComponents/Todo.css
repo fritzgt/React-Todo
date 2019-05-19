@@ -117,7 +117,7 @@ input::placeholder {
         padding: 5px;
         position: fixed;
         bottom: 60px;
-        left: 420px;
+        left: 85%;
     }
 
     .button i {
