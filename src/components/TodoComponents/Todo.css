@@ -114,7 +114,7 @@ input::placeholder {
         border: 0;
         color: #4585F5;
         font-size: 18px;
-        padding: 5px;
+        padding: 0;
         position: fixed;
         bottom: 60px;
         left: 85%;
