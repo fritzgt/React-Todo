@@ -76,12 +76,16 @@ a {
     .App {
         padding: 0;
         max-width: 100%;
-        border-bottom: 1px solid lightgray;
+        /* border-bottom: 1px solid lightgray; */
+        background-color: white;
+        height: 1000px;
     }
 
     .header {
         background-color: 0;
         background-color: #1E90FF;
+        position: fixed;
+        width: 100%;
     }
 
     h1 {
@@ -98,12 +102,12 @@ a {
     body {
 
         background-image: url("");
-        background-color: #FAFAFA;
+        background-color: #1E90FF;
     }
 
     footer i {
         padding-top: 20px;
-        /* color: #1E90FF; */
+        position: fixed
     }
 
 
