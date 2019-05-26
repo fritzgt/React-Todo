@@ -11,12 +11,17 @@ const Todo = props => {
     >
       <p>
         <i
-          className={`far fa-lg ${
-            props.item.completed ? " fas fa-check-circle" : " fa-circle"
+          className={`fa-lg ${
+            props.item.completed ? " fas fa-check-circle" : " far fa-circle"
           }`}
         />
         {props.item.task}
       </p>
+      {/* <i
+        className={` fa-lg ${
+          props.item.completed ? " fas fa-star" : " far fa-star"
+        }`}
+      /> */}
     </div>
   );
 };

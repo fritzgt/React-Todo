@@ -92,7 +92,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1>
-            <i class="far  fa-lightbulb" />
+            <i className="far  fa-lightbulb" />
             Daily To-Do App
           </h1>
         </div>
