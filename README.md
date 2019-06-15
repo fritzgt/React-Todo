@@ -4,10 +4,12 @@
 
 ## Initializing the project.
 
-- `Fork and clone` this project and cd into your cloned version.
-- `yarn install` will pull in all the node_modules you need.
-- `yarn start` will start a development server on your `http://localhost:3000`.
-  - If yarn asks you to select different port with some error message, just select `Y` and it will pull it up on port 3001. This simply means you have a development server up and running on that port already.
+[X] `Fork and clone` this project and cd into your cloned version.
+
+[X] `yarn install` will pull in all the node_modules you need.
+[X] `yarn start` will start a development server on your `http://localhost:3000`.
+
+[X] If yarn asks you to select different port with some error message, just select `Y` and it will pull it up on port 3001. This simply means you have a development server up and running on that port already.
 
 ## Instructions
 
@@ -21,12 +23,12 @@
 ```js
 [
   {
-    task: 'Organize Garage',
+    task: "Organize Garage",
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    task: "Bake Cookies",
     id: 1528817084358,
     completed: false
   }
@@ -39,24 +41,37 @@
 
 #### Day 1 Challenges
 
-- **Don't focus on styling yet**. We want you to worry about function over form today.
-- Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
-- Be sure to use the given files for building out these components.
-- `<App />` will hold all the data needed for this project. It will also be the container for your Todo Components.
-  - All of your application data will be stored here on `<App />`.
-  - All of your `handler` functions should live here on `<App />`.
-- `<TodoList />` receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
-- `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
-- `<TodoForm>` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
-  - Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
-  - Once a todo is submitted, the Todo List should re-render and show the added todo.
+[X] **Don't focus on styling yet**. We want you to worry about function over form today.
+
+[X] Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
+
+[X] Be sure to use the given files for building out these components.
+
+[X] `<App />` will hold all the data needed for this project. It will also be the container for your Todo Components.
+
+[X] All of your application data will be stored here on `<App />`.
+
+[X] All of your `handler` functions should live here on `<App />`.
+
+[X] `<TodoList />` receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
+
+[X] `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
+
+[X] `<TodoForm>` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
+
+[X] Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
+
+[X] Once a todo is submitted, the Todo List should re-render and show the added todo.
 
 #### Day 2 Challenges
 
-- Add the functionality to toggle your todo's completed flag from `false` to `true`.
-  - Once a todo is completed, be sure to demonstrate to the user that the todo is completed by adding a line-through style property if the completed flag is true.
-- Add the ability to remove any todos that you have completed. `.filter` will be your best friend here. When a user clicks on the `Clear Completed` button call your handler function that will filter out any todos that have the completed flag toggled to `true`.
-- **Now is the time to style** Take your time to make this an app that you can be proud of.
+[X]Add the functionality to toggle your todo's completed flag from `false` to `true`.
+
+[X] Once a todo is completed, be sure to demonstrate to the user that the todo is completed by adding a line-through style property if the completed flag is true.
+
+[X] Add the ability to remove any todos that you have completed. `.filter` will be your best friend here. When a user clicks on the `Clear Completed` button call your handler function that will filter out any todos that have the completed flag toggled to `true`.
+
+[X] **Now is the time to style** Take your time to make this an app that you can be proud of.
 
 #### Stretch Problems
 
@@ -64,4 +79,4 @@
 
 - **Search Functionality** Add a input bar that allows you to search through your tasks and only show the ones that match the search input.
 
-- **Hosting** Create a [Netlify Account](https://www.netlify.com/) and follow the tutorial on how to host your shiny new todo app on the world wide web.
+[X] **Hosting** Create a [Netlify Account](https://www.netlify.com/) and follow the tutorial on how to host your shiny new todo app on the world wide web.

@@ -1,0 +1,137 @@
+.todo-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.task {
+  background-color: #4585f5;
+  width: 45%;
+  text-align: left;
+  margin: 4px 0;
+  padding-left: 8px;
+}
+
+.task.completed {
+  background-color: #4cae51;
+  text-decoration: line-through;
+}
+
+/* .fa-star {
+    color: #4CAE51;
+    text-align: right;
+} */
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+form > input {
+  padding: 6px;
+  font-size: 1.5rem;
+  width: 240px;
+  outline: 0;
+  border: 1px solid #4585f5;
+  border-radius: 15px;
+  margin-right: 8px;
+}
+
+button {
+  background-color: #4cae51;
+  border: 1px solid #4cae51;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 15px;
+}
+
+input::placeholder {
+  font-size: 1.3rem;
+  opacity: 0.4;
+  padding: 5px;
+}
+
+.clear-btn {
+  background-color: #4cae51;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 0;
+  }
+
+  form > input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 10px auto;
+    border: 0;
+    border-top: 1px solid lightgray;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+  }
+
+  .task.completed {
+    color: gray;
+    background-color: white;
+  }
+
+  .task.completed i {
+    color: #4cae51;
+  }
+
+  .todo-list {
+    flex-flow: column;
+    color: gray;
+    margin: 0 auto;
+  }
+
+  .task {
+    border-bottom: 1px solid lightgray;
+    margin: 0 auto;
+    width: 98%;
+    background-color: white;
+    font-size: 1.3rem;
+  }
+
+  button {
+    /* display: none; */
+    background-color: white;
+    border-radius: 0;
+    border: 0;
+    color: #4585f5;
+    font-size: 18px;
+    padding: 0;
+    position: fixed;
+    bottom: 60px;
+    left: 85%;
+  }
+
+  .button i {
+    color: #4585f5;
+  }
+
+  .clear-btn {
+    /* display: block; */
+    width: 100%;
+    background-color: #1e90ff;
+    border: 0;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+
+  .clear-btn i {
+    color: white;
+  }
+}
